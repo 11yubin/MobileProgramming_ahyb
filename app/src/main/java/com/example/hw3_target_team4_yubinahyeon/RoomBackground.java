@@ -1,5 +1,6 @@
 package com.example.hw3_target_team4_yubinahyeon;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -10,6 +11,7 @@ import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.RelativeLayout;
 
 public class RoomBackground extends View {
     public RoomBackground(Context context) {
@@ -54,4 +56,6 @@ public class RoomBackground extends View {
         path3.lineTo(canvas.getWidth()*4/5, canvas.getHeight()*1/2);
         canvas.drawPath(path3, paint);
     }
+
+
 }

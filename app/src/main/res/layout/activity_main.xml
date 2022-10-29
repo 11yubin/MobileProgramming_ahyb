@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,10 +8,11 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="731dp"
-        android:orientation="horizontal">
+        <com.example.hw3_target_team4_yubinahyeon.RoomBackground
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/massage"/>
 
         <ImageView
             android:id="@+id/massage"
@@ -27,6 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_toRightOf="@id/massage"
             app:srcCompat="@drawable/picture" />
 
         <ImageView
@@ -34,6 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_toRightOf="@id/picture"
             app:srcCompat="@drawable/plant"
             tools:layout_editor_absoluteX="151dp"
             tools:layout_editor_absoluteY="-3dp" />
@@ -43,6 +46,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_toRightOf="@id/plant"
             app:srcCompat="@drawable/sofa"
             tools:layout_editor_absoluteX="202dp"
             tools:layout_editor_absoluteY="11dp" />
@@ -52,6 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_toRightOf="@id/sofa"
             app:srcCompat="@drawable/table"
             tools:layout_editor_absoluteX="229dp"
             tools:layout_editor_absoluteY="-3dp" />
@@ -61,12 +66,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_toRightOf="@id/table"
             app:srcCompat="@drawable/tv"
             tools:layout_editor_absoluteX="290dp"
             tools:layout_editor_absoluteY="11dp" />
 
 
-    </LinearLayout>
 
 
-</LinearLayout>
+    </RelativeLayout>
+
+

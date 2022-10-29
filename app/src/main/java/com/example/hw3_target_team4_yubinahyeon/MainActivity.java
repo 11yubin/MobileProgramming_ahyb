@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
+
     ImageView table;
     ImageView tv;
     ImageView sofa;
