@@ -1,15 +1,13 @@
 package com.example.hw3_target_team4_yubinahyeon;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.Rect;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import com.example.hw3_target_team4_yubinahyeon.RoomBackground;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +17,10 @@ public class MainActivity extends AppCompatActivity {
     ImageView plant;
     ImageView massage;
     ImageView picture;
+
+    Button rgb;
+    Button original;
+    Button cmy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         plant = findViewById(R.id.plant);
         massage = findViewById(R.id.massage);
         picture = findViewById(R.id.picture);
-
 
         table.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -170,5 +171,37 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+        rgb = findViewById(R.id.buttonRGB);
+        cmy = findViewById(R.id.buttonCMY);
+        original = findViewById(R.id.buttonOrigin);
+
+        rgb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                RoomBackground.pt1Color = Color.RED;
+                RoomBackground.pt2Color = Color.GREEN;
+                RoomBackground.pt3Color = Color.BLUE;
+            }
+        });
+
+        original.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                RoomBackground.pt1Color = Color.GRAY;
+                RoomBackground.pt2Color = Color.LTGRAY;
+                RoomBackground.pt3Color = Color.DKGRAY;
+            }
+        });
+
+        cmy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                RoomBackground.pt1Color = Color.CYAN;
+                RoomBackground.pt2Color = Color.MAGENTA;
+                RoomBackground.pt3Color = Color.YELLOW;
+            }
+        });
     }
+
 }
