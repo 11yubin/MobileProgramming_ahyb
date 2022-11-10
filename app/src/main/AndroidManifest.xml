@@ -23,6 +23,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".ChartActivity"></activity>
+        <activity android:name=".LineActivity"></activity>
+        <activity android:name=".RectActivity"></activity>
+        <activity android:name=".CircleActivity"></activity>
     </application>
 
 </manifest>

@@ -22,11 +22,11 @@ public class ChartActivity extends AppCompatActivity {
         Button rect = (Button) findViewById(R.id.histogram);
         Button circle = (Button) findViewById(R.id.circleChart);
 
-        Bundle      extras = getIntent().getExtras();
-        tv.setText("food1 " + extras.getString("f1") + ": " + extras.get("c1") + "Kcal\n" +
-                "food2 " + extras.getString("f2") + ": " + extras.get("c2") + "Kcal\n" +
-                "food3 " + extras.getString("f3") + ": " + extras.get("c3") + "Kcal\n" +
-                "food4 " + extras.getString("f4") + ": " + extras.get("c4") + "Kcal\n");
+        Bundle extras = getIntent().getExtras();
+        tv.setText("food1 " + extras.getString("f1") + ": " + extras.getInt("c1") + "Kcal\n" +
+                "food2 " + extras.getString("f2") + ": " + extras.getInt("c2") + "Kcal\n" +
+                "food3 " + extras.getString("f3") + ": " + extras.getInt("c3") + "Kcal\n" +
+                "food4 " + extras.getString("f4") + ": " + extras.getInt("c4") + "Kcal\n");
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +40,7 @@ public class ChartActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent confirm = new Intent(ChartActivity.this, LineActivity.class);
+                confirm.putExtras(extras);
                 startActivity(confirm);
             }
         });
@@ -48,6 +49,7 @@ public class ChartActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent confirm = new Intent(ChartActivity.this, RectActivity.class);
+                confirm.putExtras(extras);
                 startActivity(confirm);
             }
         });
@@ -56,6 +58,7 @@ public class ChartActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent confirm = new Intent(ChartActivity.this, CircleActivity.class);
+                confirm.putExtras(extras);
                 startActivity(confirm);
             }
         });

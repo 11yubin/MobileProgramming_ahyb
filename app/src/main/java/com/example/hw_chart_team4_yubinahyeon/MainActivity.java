@@ -52,10 +52,10 @@ public class MainActivity extends AppCompatActivity {
                 extras.putString("f2", f2);
                 extras.putString("f3", f3);
                 extras.putString("f4", f4);
-                extras.putString("c1", c1);
-                extras.putString("c2", c2);
-                extras.putString("c3", c3);
-                extras.putString("c4", c4);
+                extras.putInt("c1", Integer.parseInt(c1));
+                extras.putInt("c2", Integer.parseInt(c2));
+                extras.putInt("c3", Integer.parseInt(c3));
+                extras.putInt("c4", Integer.parseInt(c4));
 
                 intent.putExtras(extras);
                 startActivity(intent);
